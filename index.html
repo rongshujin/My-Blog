@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- zheshiyitiaozhushi -->
+
+<html lang="en">
+
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>MyTitle</title>
+    <script src="index.js"></script>
+
+</head>
+<body>
+<div>
+    <h1>My First Heading</h1>
+        <a href = "#" title = "paragraph">
+            <a href = "https://www.wikipedia.org/"></a>
+        <p> My first <b>paragraph</b>!!!</p>
+        </a>
+</div>
+<div>
+    <h2>Chapter1
+    </h2>
+    <h2>Chapter2
+    </h2>
+</div>
+<div>
+    <p>Click the botton.</p>
+        <button
+            id="hide">Hide</button>
+        <button
+            id="show">Show</button>
+        <button
+            id="button">送信</button>
+<!--        <button-->
+<!--                type="button" id="text" disabled>待って！</button>-->
+</div>
+
+<div style="text-align: center;">
+    <input type="button" value="下一步" id="nextBtn" onclick="btnfunction()" disabled>
+    <!-- <button id="nextBtn">下一步</button> -->
+    <button onclick="filterClick(this);"><span>&nbsp;查询</span></button>
+</div>
+
+</body>
+<!--<script>-->
+<!--    let i=1;-->
+<!--    let obj = $("#text");-->
+<!--    let ttt;-->
+
+<!--    obj.click(function() {-->
+<!--        obj.attr("disabled", true);-->
+<!--        ttt = setTimeout(function () {-->
+<!--            $("#text").attr("disabled", false);-->
+<!--        });-->
+
+<!--        function test() {-->
+<!--            if (i > 5) {-->
+<!--                obj.attr("disabled", false);-->
+<!--                obj.text("クリックしてください");-->
+<!--                i = 1;-->
+<!--                /* 清除已设置的setTimeout对象 */-->
+<!--                clearInterval(ttt);-->
+<!--            } else {-->
+<!--                obj.text(i);-->
+<!--                i++;-->
+<!--            }-->
+<!--        }});-->
+
+<!--</script>-->
+<script>
+    //设置按钮3秒后可以点击
+    var i = 3;
+    var time = setInterval(function(){
+        if(i>0){
+            $("#nextBtn").val("下一步("+i+"s)");
+            i--;
+        }else{
+            $("#nextBtn").val("下一步");
+            $("#nextBtn").removeAttr("disabled");
+            clearInterval(time);
+        }
+    },1000);
+
+    //测试3秒后可以点击
+    function btnfunction(){
+    alert("测试");
+    }
+
+
+</script>
+</html>
